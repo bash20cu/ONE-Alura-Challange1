@@ -165,6 +165,7 @@ textarea.danger{
 }
 
 div.pop-up{
+    font-family: 'Inter';
     top: -100px;
     right: 10%;
     width: max(150px,20%);
@@ -176,7 +177,7 @@ div.pop-up{
     display: inline;
     padding-top: 12px;
     position: absolute;
-    animation-duration: 1.5s;
+    animation-duration: 3s;
     animation-name: slideup;
 }
 
