@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+
+:root {
+    --alure-theme: #0A3871;
+    --danger: red
+}
+
+*{font-family: 'Inter';}
+
+#wrapper{margin: min(1rem, 14px);height: max(100%, max-content);}
+
+body{height: 97vh;}
+body, textarea{
+    border: none;
+    background-color: #E5E5E5;
+    margin: 0;
+}
+textarea{resize: none;}
+
+div.container__buttons, section {width: 100%;}
+
+
+section > div{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    height: 100%;
+}
+
+textarea.danger{
+    border: solid var(--danger) 1px;
+    outline: solid var(--danger) 1px;;
+}
+
+
+.hidden, #searchimage{
+    display: none;
+}
+.flex{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.flex-row{-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;}
+
+.flex-column{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+
+
+.container__buttons_alura{
+    border-radius: 24px;
+    margin: 10px 20px 10px 20px;
+    border: solid var(--alure-theme) 1px;
+    width: min(100%,320px) !important;
+    height: 65px !important;
+}
+
+.container__buttons_alura:disabled{
+    background-color: darkgray !important;
+}
+
+.container__buttons_alura:hover{background-color: #8488c7b5;}
+#cifrar:hover{background-color: darkblue;}
+.card{
+    background-color: white;
+    -webkit-box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    
+}
+
+#text-cifrable{
+    border-radius: 12px;
+    width: 80%;
+    height: 50vh;
+}
+
+#text-cifrable::-webkit-input-placeholder{
+    color:var(--alure-theme);
+    font-size: 2.5rem;
+}
+
+#text-cifrable::-moz-placeholder{
+    color:var(--alure-theme);
+    font-size: 1.5rem;
+}
+
+#text-cifrable:-ms-input-placeholder{
+    color:var(--alure-theme);
+    font-size: 1.5rem;
+}
+
+#text-cifrable::-ms-input-placeholder{
+    color:var(--alure-theme);
+    font-size: 1.5rem;
+}
+
+#text-cifrable::placeholder{
+    color:var(--alure-theme);
+    font-size: 1.5rem;
+}
+
+#text-cifrable:focus-visible{
+    outline: solid var(--alure-theme) 1px;
+    border-radius: 12px;
+}
+
+#cifrar{
+    background-color: var(--alure-theme);
+    color: aliceblue;
+}
+
+
+.there-is-text, .there-is-not-text{
+    justify-content: space-between;
+    padding-top: max(1rem, 14px);
+    padding-bottom: max(1rem, 14px);
+}
+.text-alternative{
+    position: static;
+    width: 336px;
+    height: 58px;
+    left: 0px;
+    top: 0px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 29px */
+
+    text-align: center;
+
+    /* Gray/gray-500 */
+
+    color: #343A40;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+}
+
+div.pop-up{
+    top: -100px;
+    right: 10%;
+    width: max(150px,20%);
+    height: 60px;
+    border-radius: 24px;
+    color: aliceblue;
+    background-color: #0A3871;
+    text-align: center;
+    display: inline;
+    padding-top: 12px;
+    position: absolute;
+    animation-duration: 1.5s;
+    animation-name: slideup;
+}
+
+@media (min-width:1000px) {
+    #searchimage{
+        display: block;
+        margin: auto;
+    }
+    
+    main{
+        height: 88vh;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+
+    main > section:first-child{
+        max-width: 60%;
+    }
+
+    main > section:nth-child(2){
+        width: 100%
+    };
+
+    .flex-column{
+        height: 90%;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        max-width: 400px;
+        height: 70%;
+        animation-duration: 1.5s;
+        animation-name: slidein;
+    }
+
+    
+}
+
+@keyframes slidein {
+    from {
+      margin-left: -500px;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+}
+
+@keyframes slideup{
+    100% {
+        opacity: 0;
+        top: -100px;
+      }
+    
+    50%{
+        opacity: 100%;
+        top: 50vh;
+    }
+
+    100%{
+        top:-100px
+    }
+}

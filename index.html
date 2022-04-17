@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+
+    <title>Challage 1 Cifrar / Descifrar Texto</title>
+
+</head>
+<body>
+    <div id="wrapper">
+    <header>
+        <object data="./static/img/logo.svg"></object>
+    </header>
+    <main class="flex">
+        <section class="container flex flex-column">
+            <textarea 
+                class="container__input" 
+                name="text-cifrable" 
+                id="text-cifrable" 
+                cols="30" 
+                rows="10"
+                placeholder="Ingrese el texto aqui"
+                required
+            ></textarea>
+            <p>
+                <object data="./static/img/important.svg"></object>
+            </p>
+            <div class="container__buttons flex flex-row">
+                <button id="cifrar" class="container__buttons_alura">Encriptar</button>
+                <button id="descifrar" class="container__buttons_alura">Desencriptar</button>
+            </div>
+        </section>
+        <section class="container card">
+            <div>
+            <div class="there-is-text hidden">
+
+                <p id="text-result" class="container__text"></p>
+                <div class="container__buttons flex">
+
+                    <button id="copiar" class="container__buttons_alura">Copiar</button>
+                </div>
+
+            </div>
+            <div class="there-is-not-text flex flex-column">
+                <object id="searchimage" data="./static/img/searchimage.svg" ></object>
+                <div class="text-alternative">   
+                    <p><strong>Ningun mensaje fue encontrado</strong></p>                   
+                </div> 
+                <div>
+                    <p>Ingresa el mensaje que deseas encriptar</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    </main>
+    <div id="pop-up" class="hidden">copiado</div>
+    </div>
+    <script src="./static/js/eventListeners.js" type="module"></script>
+</body>
+</html>
